@@ -1,0 +1,37 @@
+.back-arrow button,
+.next-arrow button{
+    color: #000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline:none;
+    border-width: 0 ;
+}
+.next-arrow,
+.back-arrow{
+    top:50%;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.next-arrow{
+    transform: rotate(180deg);
+    right: 0;
+}
+.disabled{
+    display: none;
+}
+@media(max-width: 700px){
+    .back-arrow button,
+    .next-arrow button{
+        width: 25px;
+        height: 25px;
+    }
+}
