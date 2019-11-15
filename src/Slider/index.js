@@ -27,7 +27,7 @@ const Slider = ({images}) => {
   }, [slideCurrentIndex]);
 
   const goToNextSlide = () => {
-    if(slideCurrentIndex === IMAGES.length - 1 ){
+    if(slideCurrentIndex === images.length - 1 ){
       return
     }
     setSlideCurrentIndex(slideCurrentIndex + 1);
