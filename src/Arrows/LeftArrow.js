@@ -4,7 +4,7 @@ import './styles.css'
 
 const LeftArrow = ({prevSlide,selectedIndex}) => {
   return (
-    <div className={`back-arrow${selectedIndex === 0 ? ' disabled' : ' '}`}  onClick={prevSlide} >
+    <div className="back-arrow"  onClick={prevSlide} >
       <button>
         <img  src={Arrow} alt="backArrow"/>
       </button>

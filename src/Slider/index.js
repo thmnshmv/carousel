@@ -28,18 +28,20 @@ const Slider = ({images}) => {
 
   const goToNextSlide = () => {
     if(slideCurrentIndex === images.length - 1 ){
-      return
+      return setSlideCurrentIndex(0)
     }
     setSlideCurrentIndex(slideCurrentIndex + 1);
   };
   const goToPreviousSlide = () => {
+    if (slideCurrentIndex === 0){
+      return setSlideCurrentIndex(images.length -1)
+    }
     setSlideCurrentIndex(slideCurrentIndex - 1);
   };
   const handleDotClick = i => () => {
     setSlideCurrentIndex(i);
   };
   return (
-
     <div>
       <div className="slider" ref={ref}>
         <div className="slider-wrapper" style={{ transform: `translate(-${slideCurrentIndex * slideWidth}px)` }}>
